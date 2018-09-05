@@ -34,4 +34,5 @@ public class DeleteAllContactsServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 }

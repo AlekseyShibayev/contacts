@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 @WebServlet(name = "MainView")
 public class MainView extends HttpServlet {
 
@@ -20,4 +19,5 @@ public class MainView extends HttpServlet {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
         requestDispatcher.forward(request, response);
     }
+
 }

@@ -9,7 +9,6 @@ import java.io.IOException;
 @WebFilter(filterName = "LogFilter")
 public class LogFilter implements Filter {
 
-
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -28,6 +27,5 @@ public class LogFilter implements Filter {
     public void destroy() {
 
     }
-
 
 }

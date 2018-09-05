@@ -2,7 +2,6 @@ package com.mycompany.app;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.Contact;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +22,6 @@ public class InsertContactsServlet extends HttpServlet {
         String url = "jdbc:postgresql://localhost:5432/java_db";
         String user = "test";
         String pass =  "123";
-
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
@@ -51,4 +49,5 @@ public class InsertContactsServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 }
