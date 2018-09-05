@@ -17,7 +17,6 @@ public class HomeController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("home controller");
         if (request.getSession().getAttribute("user") == null) {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/loginView.do");
             requestDispatcher.forward(request, response);

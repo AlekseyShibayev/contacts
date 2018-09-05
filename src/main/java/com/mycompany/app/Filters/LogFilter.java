@@ -17,14 +17,11 @@ public class LogFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        System.out.println("log");
         long before = System.currentTimeMillis();
         chain.doFilter(req, resp);
         long after = System.currentTimeMillis();
         Logger logger = LogManager.getLogger(LogFilter.class);
         logger.debug(after-before + " ms:");
-        System.out.println("log2");
-        System.out.println("_________________");
     }
 
     @Override
