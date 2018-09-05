@@ -1,7 +1,6 @@
 package com.mycompany.app;
 
 import com.mycompany.app.Beans.Contact;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
