@@ -22,7 +22,7 @@
   <p><input onclick="deleteAllContacts()" type="button" value="Delete all"></p>
 </form>
 <form>
-  <p><input onclick="logout()" type="button" value="Logout"></p>
+  <p><input onclick="logout()" type="button" value="  Logout  "></p>
 </form>
 <script type="text/javascript">
 
