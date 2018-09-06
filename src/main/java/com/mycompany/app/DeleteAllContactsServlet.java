@@ -1,5 +1,6 @@
 package com.mycompany.app;
 
+import com.mycompany.app.Dao.DriverPostgresqlManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,15 +18,7 @@ public class DeleteAllContactsServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType ("text/html;charset=utf-8");
-        String url = "jdbc:postgresql://localhost:5432/java_db";
-        String user = "test";
-        String pass =  "123";
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        try (Connection connection = DriverManager.getConnection(url, user, pass)) {
+        try (Connection connection = DriverPostgresqlManager.getPostgresqlConnection()) {
             Statement statement = connection.createStatement();
             statement.executeUpdate("DELETE FROM contacts;");
             Utilities.myResponsePrint(response);

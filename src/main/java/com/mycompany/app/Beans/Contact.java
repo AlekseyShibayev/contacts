@@ -44,7 +44,10 @@ public class Contact implements Comparable<Contact> {
     public int compareTo(Contact other) {
         if (other != null){
             if (this.getClass().equals(other.getClass())) {
-                return (this.getName().compareTo(other.getName()));}
+                if ((this.getName()!=null)&&(this.getTelephone()!=null)&&(other.getTelephone()!=null)&&(other.getName()!=null)) {
+                    return (this.getName().compareTo(other.getName()));
+                }
+            }
         }
         return 0;
     }
