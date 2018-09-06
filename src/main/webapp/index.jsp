@@ -21,6 +21,9 @@
 <form>
   <p><input onclick="deleteAllContacts()" type="button" value="Delete all"></p>
 </form>
+<form>
+  <p><input onclick="logout()" type="button" value="Logout"></p>
+</form>
 <script type="text/javascript">
 
     function deleteAllContacts() {
@@ -80,6 +83,18 @@
                 }
             }
         });
+    }
+
+    function logout() {
+        $.ajax({
+            url: '/logout.do',
+            data: {},
+            success: function (response) {
+                if (response == "1") {
+                    location.reload();
+                }
+            }
+        })
     }
 
 </script>

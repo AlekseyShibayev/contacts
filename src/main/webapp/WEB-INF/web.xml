@@ -4,6 +4,14 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.mycompany.app.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout.do</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>index</servlet-name>
@@ -50,6 +58,7 @@
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>InsertContactsServlet</servlet-name>
         <servlet-class>com.mycompany.app.InsertContactsServlet</servlet-class>
@@ -58,6 +67,7 @@
         <servlet-name>InsertContactsServlet</servlet-name>
         <url-pattern>/insert.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>SelectContactsServlet</servlet-name>
         <servlet-class>com.mycompany.app.SelectContactsServlet</servlet-class>
@@ -66,6 +76,7 @@
         <servlet-name>SelectContactsServlet</servlet-name>
         <url-pattern>/selectAll.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>DeleteAllContactsServlet</servlet-name>
         <servlet-class>com.mycompany.app.DeleteAllContactsServlet</servlet-class>
@@ -74,6 +85,7 @@
         <servlet-name>DeleteAllContactsServlet</servlet-name>
         <url-pattern>/deleteAll.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>LoginCheckServlet</servlet-name>
         <servlet-class>com.mycompany.app.LoginCheckServlet</servlet-class>

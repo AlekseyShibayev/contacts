@@ -21,7 +21,6 @@ public class SelectContactsServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType ("text/html;charset=utf-8");
         try (Connection connection = DriverPostgresqlManager.getPostgresqlConnection()) {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM contacts;");

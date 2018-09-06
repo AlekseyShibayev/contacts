@@ -17,6 +17,7 @@ public class SecurityFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
+        response.setContentType ("text/html;charset=utf-8");
         String url = request.getRequestURI();
         if (url.endsWith(".do")) {
             chain.doFilter(req, resp);

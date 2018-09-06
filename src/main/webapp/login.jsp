@@ -13,11 +13,11 @@
 <br>
 <p>Try login/password: test/123</p>
 <form>
-    <p><input onclick="tryLogin()" type="button" value="Login" id="login_button"></p>
+    <p><input onclick="login()" type="button" value="Login" id="login_button"></p>
 </form>
 <script type="text/javascript">
 
-    function tryLogin() {
+    function login() {
         var entry = {login: $('#saveLogin').val(), password: $('#savePassword').val()};
         $.ajax({
             url: '/loginCheck.do',
