@@ -61,7 +61,7 @@
 
     <servlet>
         <servlet-name>InsertContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.InsertContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.Servlets.InsertContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InsertContactsServlet</servlet-name>
@@ -70,7 +70,7 @@
 
     <servlet>
         <servlet-name>SelectContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.SelectContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.Servlets.SelectContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SelectContactsServlet</servlet-name>
@@ -79,7 +79,7 @@
 
     <servlet>
         <servlet-name>DeleteAllContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.DeleteAllContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.Servlets.DeleteAllContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteAllContactsServlet</servlet-name>
