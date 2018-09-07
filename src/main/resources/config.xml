@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="psql" scope="prototype" class="com.mycompany.app.Dao.DriverPostgresql">
+        <property name="connection" value="connection"/>
+    </bean>
+
+    <bean id="ds" class="com.mycompany.app.Dao.DataSourse">
+        <property name="connection" ref="psql" />
+    </bean>
+
+</beans>
