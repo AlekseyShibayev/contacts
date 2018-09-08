@@ -1,4 +1,4 @@
-package com.mycompany.app.Dao;
+package com.mycompany.app.DataBase;
 
 import com.mycompany.app.Beans.Contact;
 import com.mycompany.app.Utilities;
@@ -32,7 +32,6 @@ public class SelectContactsServlet extends BaseServletDao {
                 Collections.sort(contacts);
                 Utilities.myResponsePrint(contacts, response);
             }
-
         } catch (SQLException e) {
             Utilities.myResponsePrint("2", response);
             e.printStackTrace();

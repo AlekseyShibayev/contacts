@@ -1,4 +1,4 @@
-package com.mycompany.app.Dao;
+package com.mycompany.app.DataBase;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.Contact;

@@ -5,7 +5,7 @@
          version="3.1">
 
     <listener>
-        <listener-class>com.mycompany.app.MyListener</listener-class>
+        <listener-class>com.mycompany.app.BaseServletContextListener</listener-class>
     </listener>
 
     <servlet>
@@ -65,7 +65,7 @@
 
     <servlet>
         <servlet-name>InsertContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.Dao.InsertContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.DataBase.InsertContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InsertContactsServlet</servlet-name>
@@ -74,7 +74,7 @@
 
     <servlet>
         <servlet-name>SelectContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.Dao.SelectContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.DataBase.SelectContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SelectContactsServlet</servlet-name>
@@ -83,7 +83,7 @@
 
     <servlet>
         <servlet-name>DeleteAllContactsServlet</servlet-name>
-        <servlet-class>com.mycompany.app.Dao.DeleteAllContactsServlet</servlet-class>
+        <servlet-class>com.mycompany.app.DataBase.DeleteAllContactsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteAllContactsServlet</servlet-name>

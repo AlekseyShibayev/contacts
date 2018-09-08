@@ -1,4 +1,4 @@
-package com.mycompany.app.Dao;
+package com.mycompany.app.DataBase;
 
 import javax.servlet.http.HttpServlet;
 import java.sql.SQLException;
@@ -11,8 +11,7 @@ public class BaseServletDao extends HttpServlet {
     @Override
     public void init() {
         try {
-            System.out.println("statement opened");
-            this.statement = ConnectionPostgresql.getConnection().createStatement();
+            this.statement = ConnectionPostgreSQL.getConnection().createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -21,7 +20,6 @@ public class BaseServletDao extends HttpServlet {
     @Override
     public void destroy() {
         try {
-            System.out.println("statement closed " + this.getClass());
             this.statement.close();
         } catch (SQLException e) {
             e.printStackTrace();

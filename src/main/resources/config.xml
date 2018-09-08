@@ -3,9 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="psql" class="com.mycompany.app.Dao.ConnectionPostgresql" init-method="init"/>
-    <bean id="BaseServletController" class="com.mycompany.app.Dao.BaseServletDao" >
-        <property name="connection" ref="psql"/>
-    </bean>
+    <bean id="psql" class="com.mycompany.app.DataBase.ConnectionPostgreSQL" init-method="init"/>
 
 </beans>

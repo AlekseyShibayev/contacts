@@ -1,4 +1,4 @@
-package com.mycompany.app.Dao;
+package com.mycompany.app.DataBase;
 
 import com.mycompany.app.Utilities;
 import javax.servlet.ServletException;

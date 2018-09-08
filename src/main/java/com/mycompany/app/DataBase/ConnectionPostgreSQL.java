@@ -1,16 +1,16 @@
-package com.mycompany.app.Dao;
+package com.mycompany.app.DataBase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class ConnectionPostgresql {
+public class ConnectionPostgreSQL {
 
     private static Connection connection;
     private final static String URL = "jdbc:postgresql://localhost:5432/java_db";
     private final static String USER = "test";
     private final static String PASS =  "123";
 
-    public ConnectionPostgresql() {
+    public ConnectionPostgreSQL() {
     }
 
     public static Connection getConnection() {
@@ -22,11 +22,10 @@ public class ConnectionPostgresql {
         System.out.println("im init Connection Postgresql");
         try {
             Class.forName("org.postgresql.Driver");
-            ConnectionPostgresql.connection = DriverManager.getConnection(URL, USER, PASS);
+            ConnectionPostgreSQL.connection = DriverManager.getConnection(URL, USER, PASS);
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        return connection;
     }
 
 }
