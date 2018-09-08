@@ -10,6 +10,7 @@ public class BaseServletDao extends HttpServlet {
 
     @Override
     public void init() {
+        System.out.println("init " + this.getClass());
         try {
             this.statement = ConnectionPostgreSQL.getConnection().createStatement();
         } catch (SQLException e) {
@@ -19,6 +20,7 @@ public class BaseServletDao extends HttpServlet {
 
     @Override
     public void destroy() {
+        System.out.println("destroy " + this.getClass());
         try {
             this.statement.close();
         } catch (SQLException e) {

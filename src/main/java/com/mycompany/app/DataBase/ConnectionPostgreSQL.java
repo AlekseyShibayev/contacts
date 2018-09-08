@@ -14,12 +14,10 @@ public class ConnectionPostgreSQL {
     }
 
     public static Connection getConnection() {
-        System.out.println("im getConn DPM");
         return connection;
     }
 
     public void init() {
-        System.out.println("im init Connection Postgresql");
         try {
             Class.forName("org.postgresql.Driver");
             ConnectionPostgreSQL.connection = DriverManager.getConnection(URL, USER, PASS);
