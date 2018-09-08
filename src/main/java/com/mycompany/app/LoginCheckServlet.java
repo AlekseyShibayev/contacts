@@ -1,7 +1,9 @@
 package com.mycompany.app;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.User;
+import com.mycompany.app.Utils.JsonUtils;
+import com.mycompany.app.Utils.ServletsUtilities;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -10,16 +12,20 @@ import java.io.IOException;
 @WebServlet(name = "LoginCheckServlet")
 public class LoginCheckServlet extends HttpServlet {
 
+    final private static User goodUser = new User("test", "123");
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        User user = mapper.readValue(request.getParameter("entry"), User.class);
-        if (user.getLogin().equals("test")&&(user.getPassword().equals("123"))) {
-            HttpSession session = request.getSession();
-            session.setAttribute("user", 1);
-            Utilities.myResponsePrint("1", response);
+        String jsonString = request.getParameter("entry");
+        if (JsonUtils.isValidJson(jsonString)) {
+            User checkUser = JsonUtils.getUserFromJson(jsonString);
+            if (checkUser.equals(goodUser)) {
+                HttpSession session = request.getSession();
+                session.setAttribute("user", 1);
+                ServletsUtilities.myResponsePrint("1", response);
+            }
         }
     }
 

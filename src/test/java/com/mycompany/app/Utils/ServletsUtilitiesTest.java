@@ -1,11 +1,11 @@
-package com.mycompany.app;
+package com.mycompany.app.Utils;
 
 import com.mycompany.app.Beans.Contact;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.*;
 
-public class UtilitiesTest {
+public class ServletsUtilitiesTest {
     static final List<Contact> list = new ArrayList<>();
     @BeforeClass
     public static void init(){
@@ -21,27 +21,27 @@ public class UtilitiesTest {
 
     @Test
     public void test_isContactCorrect_0() {
-        Assert.assertFalse(Utilities.isContactCorrect(list.get(0)));
+        Assert.assertFalse(ServletsUtilities.isContactCorrect(list.get(0)));
     }
 
     @Test
     public void test_isContactCorrect_1() {
-        Assert.assertFalse(Utilities.isContactCorrect(list.get(1)));
+        Assert.assertFalse(ServletsUtilities.isContactCorrect(list.get(1)));
     }
 
     @Test
     public void test_isContactCorrect_2() {
-        Assert.assertFalse(Utilities.isContactCorrect(list.get(2)));
+        Assert.assertFalse(ServletsUtilities.isContactCorrect(list.get(2)));
     }
 
     @Test
     public void test_isContactCorrect_3() {
-        Assert.assertTrue(Utilities.isContactCorrect(list.get(3)));
+        Assert.assertTrue(ServletsUtilities.isContactCorrect(list.get(3)));
     }
 
     @Test
     public void test_isContactCorrect_4() {
-        Assert.assertFalse(Utilities.isContactCorrect(list.get(4)));
+        Assert.assertFalse(ServletsUtilities.isContactCorrect(list.get(4)));
     }
 
 }

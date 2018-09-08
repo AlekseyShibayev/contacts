@@ -1,7 +1,7 @@
 package com.mycompany.app.DataBase;
 
 import com.mycompany.app.Beans.Contact;
-import com.mycompany.app.Utilities;
+import com.mycompany.app.Utils.ServletsUtilities;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ public class SelectContactsServlet extends BaseServletDao {
         try {
             ResultSet rs = statement.executeQuery("SELECT * FROM contacts;");
             if (!rs.isBeforeFirst()) {
-                Utilities.myResponsePrint("1", response);
+                ServletsUtilities.myResponsePrint("1", response);
             } else {
                 List<Contact> contacts = new ArrayList<>();
                 while (rs.next()) {
@@ -30,10 +30,10 @@ public class SelectContactsServlet extends BaseServletDao {
                     contacts.add(contact);
                 }
                 Collections.sort(contacts);
-                Utilities.myResponsePrint(contacts, response);
+                ServletsUtilities.myResponsePrint(contacts, response);
             }
         } catch (SQLException e) {
-            Utilities.myResponsePrint("2", response);
+            ServletsUtilities.myResponsePrint("2", response);
             e.printStackTrace();
         }
     }

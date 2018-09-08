@@ -1,6 +1,6 @@
 package com.mycompany.app.DataBase;
 
-import com.mycompany.app.Utilities;
+import com.mycompany.app.Utils.ServletsUtilities;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +17,9 @@ public class DeleteAllContactsServlet extends BaseServletDao {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             statement.executeUpdate("DELETE FROM contacts;");
-            Utilities.myResponsePrint(response);
+            ServletsUtilities.myResponsePrint(response);
         } catch (SQLException e) {
+            ServletsUtilities.myResponsePrint("2", response);
             e.printStackTrace();
         }
     }

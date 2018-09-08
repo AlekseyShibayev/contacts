@@ -1,5 +1,7 @@
 package com.mycompany.app;
 
+import com.mycompany.app.Utils.ServletsUtilities;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,7 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.setAttribute("user", null);
-        Utilities.myResponsePrint("1", response);
+        ServletsUtilities.myResponsePrint("1", response);
     }
 
 }

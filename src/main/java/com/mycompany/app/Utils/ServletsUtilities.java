@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.Contact;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
-public class Utilities {
+public class ServletsUtilities {
 
     public static void myResponsePrint(Contact contact, HttpServletResponse response){
         if (contact != null && response != null) {
