@@ -1,4 +1,4 @@
-package com.mycompany.app.Servlets;
+package com.mycompany.app.Dao;
 
 import com.mycompany.app.Utilities;
 import javax.servlet.ServletException;
@@ -9,18 +9,16 @@ import java.io.IOException;
 import java.sql.*;
 
 @WebServlet(name = "DeleteAllContactsServlet")
-public class DeleteAllContactsServlet extends BaseServletController {
+public class DeleteAllContactsServlet extends BaseServletDao {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection connection = driver.getConnection()) {
-            Statement statement = connection.createStatement();
+        try {
             statement.executeUpdate("DELETE FROM contacts;");
             Utilities.myResponsePrint(response);
         } catch (SQLException e) {
-            Utilities.myResponsePrint("2", response);
             e.printStackTrace();
         }
     }

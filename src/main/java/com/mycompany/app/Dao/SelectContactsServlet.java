@@ -1,4 +1,4 @@
-package com.mycompany.app.Servlets;
+package com.mycompany.app.Dao;
 
 import com.mycompany.app.Beans.Contact;
 import com.mycompany.app.Utilities;
@@ -13,14 +13,13 @@ import java.util.Collections;
 import java.util.List;
 
 @WebServlet(name = "SelectContactsServlet")
-public class SelectContactsServlet extends BaseServletController {
+public class SelectContactsServlet extends BaseServletDao {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection connection = driver.getConnection()) {
-            Statement statement = connection.createStatement();
+        try {
             ResultSet rs = statement.executeQuery("SELECT * FROM contacts;");
             if (!rs.isBeforeFirst()) {
                 Utilities.myResponsePrint("1", response);
@@ -33,6 +32,7 @@ public class SelectContactsServlet extends BaseServletController {
                 Collections.sort(contacts);
                 Utilities.myResponsePrint(contacts, response);
             }
+
         } catch (SQLException e) {
             Utilities.myResponsePrint("2", response);
             e.printStackTrace();

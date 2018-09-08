@@ -1,4 +1,4 @@
-package com.mycompany.app.Servlets;
+package com.mycompany.app.Dao;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.Contact;
@@ -11,14 +11,13 @@ import java.io.IOException;
 import java.sql.*;
 
 @WebServlet(name = "InsertContactsServlet")
-public class InsertContactsServlet extends BaseServletController {
+public class InsertContactsServlet extends BaseServletDao {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (Connection connection = driver.getConnection()) {
-            Statement statement = connection.createStatement();
+        try{
             ObjectMapper mapper = new ObjectMapper();
             Contact contact = mapper.readValue(request.getParameter("entry"), Contact.class);
             if (Utilities.isContactCorrect(contact)) {
