@@ -10,6 +10,7 @@ import java.io.IOException;
 
 @WebServlet(name = "LogoutServlet")
 public class LogoutServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
@@ -18,4 +19,5 @@ public class LogoutServlet extends HttpServlet {
         session.setAttribute("user", null);
         Utilities.myResponsePrint("1", response);
     }
+
 }
