@@ -17,4 +17,4 @@ create role test login password '123';
 
 grant select, insert, delete on contacts to test;
 
-grant usage on contacts_id_seq to test;
+grant usage on contact_id_seq to test;
