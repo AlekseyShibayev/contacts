@@ -1,6 +1,5 @@
 package com.mycompany.app.DataBase;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.Beans.Contact;
 import com.mycompany.app.Utils.JsonUtils;
 import com.mycompany.app.Utils.ServletsUtilities;
@@ -11,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
 
-@WebServlet(name = "InsertContactsServlet")
+@WebServlet(urlPatterns = "/insert.do")
 public class InsertContactsServlet extends BaseServletDao {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,7 +35,7 @@ public class InsertContactsServlet extends BaseServletDao {
                     ServletsUtilities.myResponsePrint("1", response);
                 }
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             ServletsUtilities.myResponsePrint("2", response);
             e.printStackTrace();
         }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@WebServlet(name = "SelectContactsServlet")
+@WebServlet(urlPatterns = "/selectAll.do")
 public class SelectContactsServlet extends BaseServletDao {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

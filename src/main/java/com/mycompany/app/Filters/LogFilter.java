@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(filterName = "LogFilter")
+@WebFilter(urlPatterns = "/*")
 public class LogFilter implements Filter {
 
     @Override

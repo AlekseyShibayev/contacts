@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet(name = "LoginCheckServlet")
+@WebServlet(urlPatterns = "/loginCheck.do")
 public class LoginCheckServlet extends HttpServlet {
 
     final private static User goodUser = new User("test", "123");
