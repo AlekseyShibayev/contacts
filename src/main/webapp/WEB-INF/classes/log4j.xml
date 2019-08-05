@@ -21,7 +21,7 @@
         </layout>
     </appender>
 
-    <logger name="com.mycompany.app.Filters.LogFilter" additivity="false">
+    <logger name="com.mycompany.app.Domain.Filters.LogFilter" additivity="false">
         <level value="debug" />
         <appender-ref ref="file" />
     </logger>

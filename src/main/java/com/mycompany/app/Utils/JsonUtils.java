@@ -1,9 +1,8 @@
 package com.mycompany.app.Utils;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mycompany.app.Beans.Contact;
-import com.mycompany.app.Beans.User;
+import com.mycompany.app.Models.Contact;
+import com.mycompany.app.Models.User;
 import java.io.IOException;
 
 public class JsonUtils {

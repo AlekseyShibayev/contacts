@@ -1,6 +1,6 @@
 package com.mycompany.app.Utils;
 
-import com.mycompany.app.Beans.User;
+import com.mycompany.app.Models.User;
 import org.junit.Assert;
 import org.junit.Test;
 

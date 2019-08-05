@@ -1,4 +1,4 @@
-package com.mycompany.app.Beans;
+package com.mycompany.app.Models;
 
 import java.util.Objects;
 

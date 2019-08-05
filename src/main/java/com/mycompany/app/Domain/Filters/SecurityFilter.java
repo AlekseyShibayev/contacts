@@ -1,4 +1,4 @@
-package com.mycompany.app.Filters;
+package com.mycompany.app.Domain.Filters;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

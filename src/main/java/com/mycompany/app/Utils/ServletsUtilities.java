@@ -1,7 +1,7 @@
 package com.mycompany.app.Utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mycompany.app.Beans.Contact;
+import com.mycompany.app.Models.Contact;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;

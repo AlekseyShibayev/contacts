@@ -1,4 +1,4 @@
-package com.mycompany.app.Views;
+package com.mycompany.app.Domain.Views;
 
 import org.junit.Test;
 import javax.servlet.*;

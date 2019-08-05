@@ -1,6 +1,6 @@
-package com.mycompany.app;
+package com.mycompany.app.Domain.Servlets;
 
-import com.mycompany.app.Beans.User;
+import com.mycompany.app.Models.User;
 import com.mycompany.app.Utils.JsonUtils;
 import com.mycompany.app.Utils.ServletsUtilities;
 

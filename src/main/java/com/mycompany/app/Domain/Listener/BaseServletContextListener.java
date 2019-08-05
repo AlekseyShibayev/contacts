@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Domain.Listener;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
