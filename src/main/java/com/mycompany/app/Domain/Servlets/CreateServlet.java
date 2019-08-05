@@ -1,5 +1,6 @@
 package com.mycompany.app.Domain.Servlets;
 
+import com.mycompany.app.Dao.ContactDao;
 import com.mycompany.app.Dao.ContactDaoImpl;
 import com.mycompany.app.Models.Contact;
 import com.mycompany.app.Utils.JsonUtils;
@@ -20,7 +21,7 @@ public class CreateServlet extends HttpServlet {
         String jsonString = request.getParameter("entry");
         if (JsonUtils.isValidJson(jsonString)) {
             Contact contact = JsonUtils.getContactFromJson(jsonString);
-            ContactDaoImpl contactDao = new ContactDaoImpl();
+            ContactDao contactDao = new ContactDaoImpl();
             contactDao.create(contact);
         }
     }
