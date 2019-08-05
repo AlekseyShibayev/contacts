@@ -32,6 +32,7 @@ public class ContactDaoImpl implements ContactDao {
 
     @Override
     public void update(Contact model) {
+        //TODO
         try (Session session = factory.openSession()) {
             session.beginTransaction();
             session.update(model);
@@ -43,7 +44,7 @@ public class ContactDaoImpl implements ContactDao {
     public void delete(Integer integer) {
         try (Session session = factory.openSession()) {
             session.beginTransaction();
-            session.delete(integer);
+            session.delete(session.get(Contact.class, integer));
             session.getTransaction().commit();
         }
     }
