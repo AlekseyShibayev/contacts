@@ -1,8 +1,7 @@
 package com.mycompany.app.Dao;
 
 import com.mycompany.app.Models.Contact;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 public class ContactDaoImpl implements ContactDao {
@@ -23,10 +22,13 @@ public class ContactDaoImpl implements ContactDao {
     }
 
     @Override
-    public Contact read(Integer integer) {
+    public Contact read(Integer id) {
         try (final Session session = factory.openSession()) {
-            final Contact result = session.get(Contact.class, integer);
-            return result != null ? result : new Contact();
+            Contact result = session.get(Contact.class, id);
+            if (result != null) {
+                Hibernate.initialize(result.getCompany());
+            }
+            return result;
         }
     }
 

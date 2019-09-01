@@ -1,12 +1,5 @@
 package com.mycompany.app.Beans;
 
-import com.mycompany.app.Models.Contact;
-import org.junit.Before;
-import org.junit.BeforeClass;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class ContactTest {
 
 //    static List<Contact> listContacts = new ArrayList<>();

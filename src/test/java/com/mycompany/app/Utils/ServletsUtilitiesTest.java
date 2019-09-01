@@ -1,10 +1,5 @@
 package com.mycompany.app.Utils;
 
-import com.mycompany.app.Models.Contact;
-import java.util.ArrayList;
-import java.util.List;
-import org.junit.*;
-
 public class ServletsUtilitiesTest {
 //    static final List<Contact> list = new ArrayList<>();
 //    @BeforeClass

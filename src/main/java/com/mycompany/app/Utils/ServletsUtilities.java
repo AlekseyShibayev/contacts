@@ -95,14 +95,14 @@ public class ServletsUtilities {
         }
     }
 
-    public static boolean isContactCorrect (Contact contact) {
-        if (contact != null && contact.getTelephone() != null && contact.getName() != null) {
-            if (contact.getTelephone().length() >= 3 && contact.getTelephone().length() <= 100)  {
-                if ((contact.getTelephone().matches("[0-9]{11}")) && (contact.getName().matches("[A-Za-zА-Яа-я0-9]*"))) {
-                    return true;
-                }}}
-        return false;
-    }
+//    public static boolean isContactCorrect (Contact contact) {
+//        if (contact != null && contact.getTelephone() != null && contact.getName() != null) {
+//            if (contact.getTelephone().length() >= 3 && contact.getTelephone().length() <= 100)  {
+//                if ((contact.getTelephone().matches("[0-9]{11}")) && (contact.getName().matches("[A-Za-zА-Яа-я0-9]*"))) {
+//                    return true;
+//                }}}
+//        return false;
+//    }
 
 }
 

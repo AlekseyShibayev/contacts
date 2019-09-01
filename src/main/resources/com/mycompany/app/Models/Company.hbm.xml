@@ -3,11 +3,10 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
-    <class name="com.mycompany.app.Models.Contact" table="contact">
-        <id name="id" column="id" type="java.lang.Integer">
+    <class name="com.mycompany.app.Models.Company" table="company">
+        <id name="id"  column="id" type="java.lang.Integer">
             <generator class="identity"/>
         </id>
-        <property name="name" column="name" type="java.lang.String"/>
-        <many-to-one name="company" column="company_id" class="com.mycompany.app.Models.Company" cascade="none"/>
+        <property name="name" column="name" type="java.lang.String" />
     </class>
 </hibernate-mapping>
