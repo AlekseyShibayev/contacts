@@ -1,6 +1,3 @@
-create database contact_database3 ENCODING 'UTF-8';
-\c contact_database3;
-
 create table if not exists company (
                                        id serial primary key,
                                        name varchar(100) not null

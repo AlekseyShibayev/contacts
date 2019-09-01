@@ -27,18 +27,7 @@ chmod a+x pathToCatalina..tomcat/bin/catalina.sh
 
 2. You will need to do something with PostgresQL DB: open terminal and let write. 
 
-$ sudo -i -u postgres
-
-$ psql
-
-create database java_db;
-
-\c java_db;
-
-create table contacts (id serial not null, telephone varchar(100) not null, name varchar(100) not null);
-
-create role test login password '123';
-
-grant select, insert, delete on contacts to test;
-
-grant usage on contacts_id_seq to test;
+sudo -i -u postgres
+psql
+create database contact_database ENCODING 'UTF-8';
+\c contact_database;
