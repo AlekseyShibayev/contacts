@@ -6,10 +6,11 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Telephone {
 
     private int id;
     private String number;
-    private Contact contact;
+    private int contactId;
 
 }

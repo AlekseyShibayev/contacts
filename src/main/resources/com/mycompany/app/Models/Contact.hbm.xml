@@ -9,5 +9,9 @@
         </id>
         <property name="name" column="name" type="java.lang.String"/>
         <many-to-one name="company" column="company_id" class="com.mycompany.app.Models.Company" cascade="none"/>
+        <set name="telephoneSet" table="telephone" cascade="all" fetch="join">
+            <key column="contact_id"/>
+            <one-to-many class="com.mycompany.app.Models.Telephone"/>
+        </set>
     </class>
 </hibernate-mapping>

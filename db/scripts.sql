@@ -1,9 +1,6 @@
 create database contact_database3 ENCODING 'UTF-8';
 \c contact_database3;
 
-
-
-
 create table if not exists company (
                                        id serial primary key,
                                        name varchar(100) not null
@@ -22,8 +19,7 @@ create table if not exists passport (
 create table if not exists telephone (
                                          id serial primary key,
                                          number varchar (100) not null,
-                                         contact_id integer not null,
-                                         foreign key (contact_id) references contact (id)
+                                         contact_id integer not null
 );
 create table if not exists device (
                                       id serial primary key,
