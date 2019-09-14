@@ -1,9 +1,7 @@
 package com.mycompany.app.Models;
 
 import com.mycompany.app.Dao.*;
-
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class HibernateMainMethod {
     public static void main(String[] args) {
