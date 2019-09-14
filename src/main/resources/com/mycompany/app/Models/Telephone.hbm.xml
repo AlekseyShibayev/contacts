@@ -9,6 +9,5 @@
         </id>
         <property name="number" column="number" type="java.lang.String" />
         <property name="contactId" column="contact_id" type="java.lang.Integer"/>
-<!--        <many-to-one name="contactId" column="contact_id" class="com.mycompany.app.Models.Contact" cascade="none"/>-->
     </class>
 </hibernate-mapping>

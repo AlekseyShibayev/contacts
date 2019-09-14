@@ -16,7 +16,7 @@ create table if not exists passport (
 create table if not exists telephone (
                                          id serial primary key,
                                          number varchar (100) not null,
-                                         contact_id integer not null
+                                         contact_id integer
 );
 create table if not exists device (
                                       id serial primary key,
