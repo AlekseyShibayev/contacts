@@ -11,5 +11,6 @@
         <mapping resource="com/mycompany/app/Models/Contact.hbm.xml"/>
         <mapping resource="com/mycompany/app/Models/Telephone.hbm.xml"/>
         <mapping resource="com/mycompany/app/Models/Company.hbm.xml"/>
+        <mapping resource="com/mycompany/app/Models/Device.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

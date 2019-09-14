@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="com.mycompany.app.Models.Device" table="device">
+        <id name="id"  column="id" type="java.lang.Integer">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="name" type="java.lang.String" />
+        <set name="contactSet" table="contact_device"  lazy="true" fetch="join" cascade="none">
+            <key>
+                <column name="device_id" not-null="true" />
+            </key>
+            <many-to-many class="com.mycompany.app.Models.Contact">
+                <column name="contact_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
